@@ -65,12 +65,12 @@ pub fn build_ebpf(opts: Options) -> Result<(), anyhow::Error> {
         .status()
         .expect("failed to build bpf program");
     assert!(status.success());
-    let status = Command::new("cargo")
-        .current_dir(kprobes_dir)
-        .env_remove("RUSTUP_TOOLCHAIN")
-        .args(&args)
-        .status()
-        .expect("failed to build bpf program");
-    assert!(status.success());
+    // let status = Command::new("cargo")
+    //     .current_dir(kprobes_dir)
+    //     .env_remove("RUSTUP_TOOLCHAIN")
+    //     .args(&args)
+    //     .status()
+    //     .expect("failed to build bpf program");
+    // assert!(status.success());
     Ok(())
 }

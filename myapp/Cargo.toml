@@ -12,8 +12,10 @@ myapp-common = { path = "../myapp-common", features = ["user"] }
 anyhow = "1"
 env_logger = "0.10"
 libc = "0.2"
+network-types = "0.0.5"
 log = "0.4"
-tokio = { version = "1.25", features = ["macros", "rt", "rt-multi-thread", "net", "signal"] }
+bytes = "1"
+tokio = { version = "1.32", features = ["macros", "rt", "rt-multi-thread", "net", "signal", "time", "io-util"] }
 
 [[bin]]
 name = "myapp"
